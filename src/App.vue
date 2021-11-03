@@ -14,12 +14,7 @@
           @click="collapsed = !collapsed"
         />
       </a-layout-header>
-      <a-layout-content
-        :style="{
-          padding: '24px',
-          minHeight: '280px',
-        }"
-      >
+      <a-layout-content class="layout">
         <router-view />
       </a-layout-content>
     </a-layout>
@@ -43,7 +38,7 @@ export default {
   },
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .trigger {
   font-size: 18px;
   line-height: 64px;
@@ -55,12 +50,9 @@ export default {
   }
 }
 
-.logo {
-  width: 100%;
-  max-width: 220px;
-  display: block;
-  margin: 10px auto;
-  padding: 0 5px;
+.layout {
+  padding: 24px;
+  min-height: 280px;
 }
 
 .fade-enter-active,

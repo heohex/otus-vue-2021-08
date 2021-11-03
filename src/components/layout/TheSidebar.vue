@@ -1,5 +1,5 @@
 <template>
-  <a-layout-sider :collapsed="collapsed" :trigger="null" collapsible width="250px">
+  <a-layout-sider :collapsed="collapsed" width="250px">
     <img alt="Rick and Morty" src="@/assets/logo.png" class="logo" />
     <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
       <router-link
@@ -68,4 +68,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="less">
+.logo {
+  width: 100%;
+  max-width: 220px;
+  display: block;
+  margin: 10px auto;
+  padding: 0 5px;
+}
+</style>
